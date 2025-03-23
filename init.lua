@@ -6,5 +6,4 @@ require("settings")
 require("options")
 require("lualine").get_config()
 require("lualine")
-
 require("config.dap.c")

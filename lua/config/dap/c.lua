@@ -18,7 +18,8 @@ dap.configurations.c = {
 				error("Build failed: " .. result)
 			end
 
-			local path = vim.fn.getcwd() .. "/database"
+			local binary = vim.fn.input("Executable name: ", "main", "file")
+			local path = vim.fn.getcwd() .. "/" .. binary
 			if vim.fn.filereadable(path) == 0 then
 				error("Binary not found: " .. path)
 			end
